@@ -61,26 +61,6 @@ if neobundle#tap('neocomplete')
     let g:neocomplete#max_list = 100
     call neobundle#untap()
 endif
-" NeoBundle 'Shougo/vimfiler.vim', {
-" \ 'lazy': 1,
-" \ 'depends' : 'Shougo/unite.vim',
-" \'autoload': {
-" \ 'commands' : [
-" \         { 'name' : 'VimFiler',
-" \           'complete' : 'customlist,vimfiler#complete' },
-" \         { 'name' : 'VimFilerTab',
-" \           'complete' : 'customlist,vimfiler#complete' },
-" \         { 'name' : 'VimFilerExplorer',
-" \           'complete' : 'customlist,vimfiler#complete' },
-" \         { 'name' : 'Edit',
-" \           'complete' : 'customlist,vimfiler#complete' },
-" \         { 'name' : 'Write',
-" \           'complete' : 'customlist,vimfiler#complete' },
-" \         'Read', 'Source'],
-" \ 'mappings' : '<Plug>(vimfiler_',
-" \ 'explorer' : 1,
-" \ }
-" \ }
 NeoBundle 'kien/ctrlp.vim'
 if neobundle#tap('ctrlp.vim')
     let g:ctrlp_custom_ignore = 'build\|dist\|node_modules\|.idea\|.git\|workspace\|bower_components\'
@@ -401,7 +381,7 @@ NeoBundle 'sjl/gundo.vim', {
             \  }
             \ }
 "easy motion -current bound to <leader><leader> by default
-" NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'Lokaltog/vim-easymotion'
 
 " NeoBundle 'thinca/vim-fontzoom', {'gui' : 1}
 NeoBundle 'tyru/open-browser.vim', {
@@ -591,4 +571,17 @@ NeoBundle 'nanotech/jellybeans.vim'
 " NeoBundle 'tomasr/molokai'
 " NeoBundle 'tpope/vim-vividchalk'
 
+NeoBundle 'm2mdas/phpcomplete-extended'
+NeoBundle 'joonty/vdebug'
+NeoBundle 'joonty/vim-phpqa'
+" Don't run messdetector on save (default = 1)
+let g:phpqa_messdetector_autorun = 0
+"
+" " Don't run codesniffer on save (default = 1)
+let g:phpqa_codesniffer_autorun = 0
+"
+" " Show code coverage on load (default = 0)
+" let g:phpqa_codecoverage_autorun = 1
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'vim-scripts/DBGp-Remote-Debugger-Interface'
 call neobundle#end()

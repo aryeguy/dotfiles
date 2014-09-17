@@ -1,9 +1,9 @@
 [user]
-    name = Gilad Peleg
-    email = giladp007@gmail.com
+    name = Guy Arye
+    email = arye.guy@gmail.com
 [core]
     autocrlf = false
-    excludesfile = ~/.dotfiles/git/.gitignore_global
+	excludesfile = /Users/guy/.gitignore
     attributesfile = ~/.dotfiles/.gitattributes
     editor = vim -w
     # Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -62,7 +62,7 @@
     co = commit
     fe = fetch
     pu = push
-    st = status
+	st = status -s
 [url "git@github.com:"]
     insteadOf = "gh:"
     pushInsteadOf = "github:"
@@ -77,3 +77,6 @@
     insteadOf = "gist:"
 [include]
     path = ~/.gitconfig.local
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

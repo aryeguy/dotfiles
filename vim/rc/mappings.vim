@@ -1,17 +1,17 @@
 """"""""""""""""""""""
 "  F-# keys mapping  "
 """"""""""""""""""""""
-nnoremap <F1> <nop>
+"nnoremap <F1> <nop>
 " See undo tree
-nnoremap <F3> :GundoToggle<cr>
+"nnoremap <F3> :GundoToggle<cr>
 " set spell check
-nnoremap <F4> :setlocal spell!<cr>
+"nnoremap <F4> :setlocal spell!<cr>
 " toggle paste
-nnoremap <F6> :set invpaste<CR>:set paste?<CR>
+"nnoremap <F6> :set invpaste<CR>:set paste?<CR>
 " format from 2 spaces to 4 spaces
-nnoremap <F7> :<C-U>set ts=2 sts=2 noexpandtab<cr>:retab!<cr>:set ts=4 sts=4 expandtab<cr>:retab<cr>
+"nnoremap <F7> :<C-U>set ts=2 sts=2 noexpandtab<cr>:retab!<cr>:set ts=4 sts=4 expandtab<cr>:retab<cr>
 " open in chrome
-nnoremap <silent> <F12>c :silent !start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" %:p<cr>
+"nnoremap <silent> <F12>c :silent !start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" %:p<cr>
 """"""""""""""""""""""""""""
 "  Regular keys unbinding  "
 """"""""""""""""""""""""""""
@@ -31,6 +31,7 @@ nnoremap Q :<c-u>qa<cr>
 " change cursor position in insert mode
 inoremap <c-h> <left>
 inoremap <c-l> <right>
+inoremap <F1> <nop>
 
 "expand window split by 25 columns
 nnoremap <c-w><c-l> 25<c-w>>
@@ -49,7 +50,7 @@ vnoremap > >gv
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Ctrl-r: Easier search and replace
-vnoremap <c-r> "hy:%s/<c-r>h//gc<left><left><left>
+" vnoremap <c-r> "hy:%s/<c-r>h//gc<left><left><left>
 
 nnoremap <silent>\w :execute 'grep! ' . expand('<cword>')<cr>:copen<cr>
 
@@ -72,7 +73,7 @@ cnoremap <c-n> <down>
 "  Leader keys mapping  "
 """""""""""""""""""""""""
 """""""""""""""
-"  <leader>r  "
+"  <leader>r    "
 """""""""""""""
 nnoremap <silent> <leader>rt i=strftime('%c')<cr>
 
@@ -84,10 +85,10 @@ nnoremap <leader>wc :bdelete<cr>
 
 "<leader>p: Copy the full path of the current file to the clipboard
 nnoremap <silent> <leader>cp :let @+=expand("%:p")<cr>:echo "Copied current file
-            \ path '".expand("%:p")."' to clipboard"<cr>
+                        \ path '".expand("%:p")."' to clipboard"<cr>
 
 """""""""""""""
-"  <leader>n  "
+"  <leader>n    "
 """""""""""""""
 " Open current dir
 nnoremap <leader>nc :NERDTreeCWD<cr>
@@ -96,7 +97,7 @@ nnoremap <leader>n<tab> :NERDTreeToggle<cr>
 " find current file in nerdtree
 nnoremap <leader>nf :NERDTreeFind<cr>
 """""""""""""""
-"  <leader>e  "
+"  <leader>e    "
 """""""""""""""
 " edit _vimrc
 nnoremap <silent> <leader>ev :edit $MYVIMRC<cr>
@@ -123,12 +124,12 @@ vnoremap <leader>ex :<c-u>execute getreg("*")<cr>
 nnoremap <leader>ec :g/^\n$/d<cr>
 
 """""""""""""""
-"  <leader>s  "
+"  <leader>s    "
 """""""""""""""
 " Switch commands.
 nnoremap <silent> <leader>sw :Switch<CR>
 """""""""""""""
-"  <leader>o  "
+"  <leader>o    "
 """""""""""""""
 " simply open search in browser
 nmap <leader>oo <Plug>(openbrowser-open)
@@ -138,7 +139,7 @@ vmap <leader>os <Plug>(openbrowser-smart-search)
 "open explorer in path of current buffer
 nnoremap <leader>oe :silent! !start explorer %:p:h:gs?\/?\\?<cr>
 """""""""""""""
-"  <leader>m  "
+"  <leader>m    "
 """""""""""""""
 "markdown preview
 nnoremap <leader>mp :Me<cr>

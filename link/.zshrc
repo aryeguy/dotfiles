@@ -13,18 +13,19 @@ DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
 
 # set oh my zsh plugins
-plugins=(git zsh-syntax-highlighting git-extras)
+plugins=(git zsh-syntax-highlighting git-extras ruby composer cp jira aws)
 
 # OS specific settings
 if [[ "$(uname)" =~ ^Darwin ]]; then
     plugins+=brew
+    plugins+=osx
 fi
 
 export EDITOR=$(which vim)
 export VISUAL="$EDITOR"
 
 # User configuration
-export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Users/guy/google-cloud-sdk/bin/:/Users/guy/jmeter/apache-jmeter-2.11/bin/"
 export SSH_KEY_PATH="~/.ssh"
 export AWS_CONFIG_FILE="~/.aws-config"
 
@@ -61,3 +62,22 @@ eval "$(gulp --completion=zsh 2> /dev/null)" || echo "Please install gulp: npm i
 export _FASD_DATA="$HOME/.cache/.fasd"
 # Fasd
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install 2> /dev/null)" || echo "Please install fasd"
+
+fpath=(/Users/guy/zsh/gcloud-zsh-completion/src/ $fpath)
+autoload -U compinit compdef
+compinit
+
+[[ -s `brew --prefix`/etc/autojump.sh  ]] && . `brew --prefix`/etc/autojump.sh
+alias dev='ssh -p 59345 guy.a.blazemeter.com'
+alias logt='ssh -p 59345 guy.a.blazemeter.com "sudo tail -100f /var/log/apache2/guy_a_error.log"'
+alias logl='ssh -p 59345 guy.a.blazemeter.com "sudo cat /var/log/apache2/guy_a_error.log" | less'
+alias stg='ssh -i /Users/guy/.ssh/bzcommercial.pem alongir@stg.a.blazemeter.com'
+alias debug='ssh -p 59345 guy.a.blazemeter.com "sudo tail -100f /tmp/guy.a.blazemeter.com/default_debug.log | grep -v InsightsTrack"'
+alias devenv='ssh -p 59345 guy.a.blazemeter.com "vim /home/guy/vol/www/drupal/sites/a.blazemeter.com/env.php"'
+
+alias tmux='TERM=xterm-256color tmux -u'
+
+export LANG=en_US.UTF-8
+
+PS1="$PS1"'$([ -n "$TMUX"  ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+

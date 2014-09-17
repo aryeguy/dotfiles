@@ -53,5 +53,8 @@ if has('autocmd')
         autocmd InsertLeave * if &paste | set nopaste mouse=a | echo 'nopaste' | endif |
                     \ if &l:diff | diffupdate | endif
         autocmd InsertLeave * if &l:diff | diffupdate | endif
+
+        " My auto commands
+        autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
     augroup END
 endif
