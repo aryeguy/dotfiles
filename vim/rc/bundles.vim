@@ -36,31 +36,31 @@ NeoBundle 'editorconfig/editorconfig-vim'
 " \   'mac' : './install.sh --clang-completer'
 " \  },
 " \ }
-NeoBundle 'Shougo/neocomplete', {
-            \ 'lazy': 1,
-            \ 'autoload': {
-            \   'insert': 1
-            \   }
-            \ }
-if neobundle#tap('neocomplete')
-    " Disable AutoComplPop.
-    let g:acp_enableAtStartup = 0
-    " Use neocomplete.
-    let g:neocomplete#enable_at_startup = 1
-    " Use smartcase.
-    let g:neocomplete#enable_smart_case = 1
-    " Set minimum syntax keyword length.
-    let g:neocomplete#sources#syntax#min_keyword_length = 3
-    " Set auto completion length.
-    let g:neocomplete#auto_completion_start_length = 2
-    " Set manual completion length.
-    let g:neocomplete#manual_completion_start_length = 0
-    " Set minimum keyword length.
-    let g:neocomplete#min_keyword_length = 3
-    let g:neocomplete#enable_auto_delimiter = 1
-    let g:neocomplete#max_list = 100
-    call neobundle#untap()
-endif
+" NeoBundle 'Shougo/neocomplete', {
+            " \ 'lazy': 1,
+            " \ 'autoload': {
+            " \   'insert': 1
+            " \   }
+            " \ }
+" if neobundle#tap('neocomplete')
+    " " Disable AutoComplPop.
+    " let g:acp_enableAtStartup = 0
+    " " Use neocomplete.
+    " let g:neocomplete#enable_at_startup = 1
+    " " Use smartcase.
+    " let g:neocomplete#enable_smart_case = 1
+    " " Set minimum syntax keyword length.
+    " let g:neocomplete#sources#syntax#min_keyword_length = 3
+    " " Set auto completion length.
+    " let g:neocomplete#auto_completion_start_length = 2
+    " " Set manual completion length.
+    " let g:neocomplete#manual_completion_start_length = 0
+    " " Set minimum keyword length.
+    " let g:neocomplete#min_keyword_length = 3
+    " let g:neocomplete#enable_auto_delimiter = 1
+    " let g:neocomplete#max_list = 100
+    " call neobundle#untap()
+" endif
 NeoBundle 'kien/ctrlp.vim'
 if neobundle#tap('ctrlp.vim')
     let g:ctrlp_custom_ignore = 'build\|dist\|node_modules\|.idea\|.git\|workspace\|bower_components\'
@@ -87,31 +87,31 @@ if neobundle#tap('vim-skeletons')
     let skeletons#skeletonsDir = ["~/.dotfiles/vim/skeletons"]
     call neobundle#untap()
 endif
-NeoBundle 'Shougo/unite.vim', {
-            \ 'lazy': 1,
-            \ 'autoload': {
-            \   'commands' : [{ 'name' : 'Unite',
-            \                 'complete' : 'customlist,unite#complete_source'},
-            \                 'UniteWithCursorWord', 'UniteWithInput']
-            \   }
-            \ }
-NeoBundle 'osyo-manga/unite-filetype', {
-            \ 'lazy': 1,
-            \'depends': ['Shougu/unite.vim'],
-            \ 'autoload': {
-            \ 'unite_sources': ['filetype']
-            \   }
-            \ }
-NeoBundle 'Shougo/unite-outline', {
-            \ 'lazy': 1,
-            \ 'depends': ['Shougu/unite.vim'],
-            \ 'autoload': {
-            \ 'unite_sources': ['outline']
-            \   }
-            \ }
-NeoBundle 'Shougo/unite-mru', {
-            \ 'lazy': 0,
-            \'depends': ['Shougu/unite.vim']
+" NeoBundle 'Shougo/unite.vim', {
+            " \ 'lazy': 1,
+            " \ 'autoload': {
+            " \   'commands' : [{ 'name' : 'Unite',
+            " \                 'complete' : 'customlist,unite#complete_source'},
+            " \                 'UniteWithCursorWord', 'UniteWithInput']
+            " \   }
+            " \ }
+" NeoBundle 'osyo-manga/unite-filetype', {
+            " \ 'lazy': 1,
+            " \'depends': ['Shougu/unite.vim'],
+            " \ 'autoload': {
+            " \ 'unite_sources': ['filetype']
+            " \   }
+            " \ }
+" NeoBundle 'Shougo/unite-outline', {
+            " \ 'lazy': 1,
+            " \ 'depends': ['Shougu/unite.vim'],
+            " \ 'autoload': {
+            " \ 'unite_sources': ['outline']
+            " \   }
+            " \ }
+" NeoBundle 'Shougo/unite-mru', {
+            " \ 'lazy': 0,
+            " \'depends': ['Shougu/unite.vim']
             \ }
 NeoBundle 'ujihisa/unite-colorscheme', {
             \ 'lazy': 1,
@@ -514,19 +514,19 @@ if neobundle#tap('vim-online-thesaurus')
     call neobundle#untap()
 endif
 
-NeoBundle 'kana/vim-textobj-user'          " required plugin
-NeoBundle 'kana/vim-textobj-line'          " al, il
-NeoBundle 'kana/vim-textobj-indent'        " ai, ii, aI, iI
-NeoBundle 'kana/vim-textobj-entire'        " ae, ie
-NeoBundle 'PeterRincker/vim-argumentative' " a, i,
-NeoBundle 'beloglazov/vim-textobj-quotes'  " q
+" NeoBundle 'kana/vim-textobj-user'          " required plugin
+" NeoBundle 'kana/vim-textobj-line'          " al, il
+" NeoBundle 'kana/vim-textobj-indent'        " ai, ii, aI, iI
+" NeoBundle 'kana/vim-textobj-entire'        " ae, ie
+" NeoBundle 'PeterRincker/vim-argumentative' " a, i,
+" NeoBundle 'beloglazov/vim-textobj-quotes'  " q
 
-NeoBundle 'Raimondi/delimitMate', {
-            \  'lazy' : 1,
-            \  'autoload' : {
-            \    'insert' : 1
-            \  }
-            \}
+" NeoBundle 'Raimondi/delimitMate', {
+            " \  'lazy' : 1,
+            " \  'autoload' : {
+            " \    'insert' : 1
+            " \  }
+            " \}
 if neobundle#tap('delimitMate')
     let delimitMate_expand_cr=1
     let delimitMate_expand_space=1
@@ -539,21 +539,21 @@ NeoBundle 'einars/js-beautify', {
             \   'filetypes' : ['html', 'js', 'css']
             \  }
             \ }
-NeoBundle 'scrooloose/syntastic', {
-            \ 'lazy': 1,
-            \  'autoload' : {
-            \   'filetypes': ['javascript', 'json', 'less', 'css', 'jade', 'html', 'sh']
-            \  }
-            \ }
-if neobundle#tap('syntastic')
-    let g:syntastic_mode_map = {
-                \ 'mode': 'passive',
-                \ 'active_filetypes': ['javascript', 'json', 'less', 'css', 'jade', 'html', 'zsh'],
-                \ 'passive_filetypes': [] }
-    let g:syntastic_enable_balloons = 0
-    let g:syntastic_always_populate_loc_list = 1
-    call neobundle#untap()
-endif
+" NeoBundle 'scrooloose/syntastic', {
+            " \ 'lazy': 1,
+            " \  'autoload' : {
+            " \   'filetypes': ['javascript', 'json', 'less', 'css', 'jade', 'html', 'sh']
+            " \  }
+            " \ }
+" if neobundle#tap('syntastic')
+    " let g:syntastic_mode_map = {
+                " \ 'mode': 'passive',
+                " \ 'active_filetypes': ['javascript', 'json', 'less', 'css', 'jade', 'html', 'zsh'],
+                " \ 'passive_filetypes': [] }
+    " let g:syntastic_enable_balloons = 0
+    " let g:syntastic_always_populate_loc_list = 1
+    " call neobundle#untap()
+" endif
 
 "Comma and semi-colon
 NeoBundle 'lfilho/cosco.vim', {

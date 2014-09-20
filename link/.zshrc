@@ -72,7 +72,7 @@ alias dev='ssh -p 59345 guy.a.blazemeter.com'
 alias logt='ssh -p 59345 guy.a.blazemeter.com "sudo tail -100f /var/log/apache2/guy_a_error.log"'
 alias logl='ssh -p 59345 guy.a.blazemeter.com "sudo cat /var/log/apache2/guy_a_error.log" | less'
 alias stg='ssh -i /Users/guy/.ssh/bzcommercial.pem alongir@stg.a.blazemeter.com'
-alias debug='ssh -p 59345 guy.a.blazemeter.com "sudo tail -100f /tmp/guy.a.blazemeter.com/default_debug.log | grep -v InsightsTrack"'
+alias debug='ssh -p 59345 guy.a.blazemeter.com "sudo tail -100f /tmp/guy.a.blazemeter.com/default_debug.log"'
 alias devenv='ssh -p 59345 guy.a.blazemeter.com "vim /home/guy/vol/www/drupal/sites/a.blazemeter.com/env.php"'
 
 alias tmux='TERM=xterm-256color tmux -u'

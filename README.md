@@ -1,22 +1,16 @@
-# <img src="img/dotfiles.png" width="321" height="62" alt="dotfiles">
-> Full glory!
-
 ## Overview
-My config files, mainly Vim & Zsh aimed at working in Windows (7/8) and Ubuntu & OSX.
+My config files, mainly Vim & Zsh aimed at working in OSX.
 
 ## Key Features
 - Uses [NeoBundle](https://github.com/Shougo/neobundle.vim) as package manager.
 - Uses [Unite](https://github.com/Shougo/unite.vim) as an all-around explorer.
-- Geared towards portability.
 - Equipped to handle web development (HTML/CSS/Js/Frameworks/etc...)
 - NERDTree/CtrlP for browsing (but soon enough will use Unite for that too)
 
 ## Goals
 
-- As Object-Oriented as possible
 - As lazy-loaded as possible (due to 75+ Vim packages)
 - Shell install scripts for windows and Linux
-- OS agnostic
 - Highly commented
 
 ## Installation
@@ -25,19 +19,7 @@ My config files, mainly Vim & Zsh aimed at working in Windows (7/8) and Ubuntu &
 ```sh
 git clone https://github.com/pgilad/dotfiles.git ~/.dotfiles
 ```
-
 - Change your shell to `zsh` (`chsh -s /bin/zsh`)
-
-### Windows
-
-- run `install/install.cmd`. If it fails - you will need Administrator permission for it.
-
-### Ubuntu
-
-- run `install/install.sh`
-
-### OSX
-
 - run `install/install.sh`
 - optionally setup `brew bundle ~./dotfiles/install/Brewfile`
 - optionally setup `brew bundle ~/.dotfiles/install/Caskfile`
@@ -75,7 +57,7 @@ I aim my vimrc to be as OO as possible. Have you ever seen a *_vimrc* like this:
 
 " Note: Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
-" Note: Vim is old
+" Note: vi is old
 set nocompatible
 
 let g:config =  {
